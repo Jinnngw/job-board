@@ -1,0 +1,20 @@
+<div class="job-board">
+    <h1>Hacker News Jobs Board</h1>
+    <ul>
+      <li *ngFor="let job of jobs">
+        <div class="job-title">
+          <a *ngIf="job.url" [href]="job.url" target="_blank">{{ job.title }}</a>
+          <span *ngIf="!job.url">{{ job.title }}</span>
+        </div>
+        <div class="job-info">
+          <p> {{ job.by }} ·</p>
+          <p>{{ formatDate(job.time) }}</p>
+        </div>
+      </li>
+    </ul>
+  
+    <button *ngIf="jobs.length < jobIds.length" (click)="loadMore()" [disabled]="isLoading">
+      {{ isLoading ? 'loading' : 'load more' }}
+    </button>
+  </div>
+  

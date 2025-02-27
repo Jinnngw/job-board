@@ -1,0 +1,54 @@
+.job-board {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5ee;
+    h1{
+      color:#ffa500
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        background-color: white;
+        
+        a,span{
+          text-decoration: none;
+          color:black;
+          font-size: large;
+          font-weight: bold;  
+        }
+
+        .job-info{
+          display: flex;
+        }
+      }
+      
+    }
+
+    button {
+      display: block;
+      font-size: 16px;
+      cursor: pointer;
+      background-color:orange;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      position: relative;
+    }
+    
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+  }
+  
+
+  
